@@ -1,0 +1,32 @@
+@import "../../../src/style/placeholders";
+@import "../../../src/style/variables";
+
+.Navbar {
+  @extend %center-row;
+
+  height: 7%;
+  width: 100%;
+  gap: 20px;
+  position: relative;
+  background: $navbar-bg;
+
+  a {
+    @extend %nav-link;
+    color: black;
+  }
+
+  a[class='active'] {
+    color: $main-color;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50px;
+    cursor: pointer;
+    color: $main-color;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+}

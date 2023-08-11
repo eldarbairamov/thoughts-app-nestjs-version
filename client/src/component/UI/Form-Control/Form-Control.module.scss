@@ -1,0 +1,40 @@
+@import "../../../style/placeholders";
+@import "../../../style/variables";
+
+.FormControl {
+  @extend %center-column;
+
+  gap: 10px;
+  position: relative;
+
+  .form_labels {
+    @extend %center-row;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  > p {
+    position: absolute;
+    color: indianred;
+    font-size: 14px;
+    top: 65px;
+  }
+
+  label {
+    align-self: flex-start;
+    color: $main-color;
+  }
+
+  label:nth-child(2) {
+    cursor: pointer;
+  }
+
+  input {
+    padding: 10px;
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+  }
+}

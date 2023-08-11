@@ -1,0 +1,40 @@
+@import "../../style/placeholders";
+@import "../../style/variables";
+
+.MainPage {
+
+  .window {
+    @extend %center-column;
+
+    width: 1000px;
+    height: 700px;
+
+    gap: 20px;
+
+    .question {
+      font-style: italic;
+      font-size: 20px;
+      color: $main-color;
+    }
+
+    textarea {
+      @extend %input;
+
+      font-size: 20px;
+      width: 500px;
+      height: 100px;
+      resize: none;
+
+      &::placeholder {
+        font-style: italic;
+        color: $main-color;
+      }
+    }
+
+    textarea[data-border=true] {
+      border: 2px solid $main-color;
+      border-radius: 10px;
+    }
+
+  }
+}

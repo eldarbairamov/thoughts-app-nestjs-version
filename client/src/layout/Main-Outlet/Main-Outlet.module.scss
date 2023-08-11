@@ -1,0 +1,8 @@
+@import "../../style/placeholders";
+
+.MainOutlet {
+  height: 93%;
+  width: 100%;
+
+  @extend %center-column;
+}

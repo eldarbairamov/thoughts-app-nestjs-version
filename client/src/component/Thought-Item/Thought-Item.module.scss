@@ -1,0 +1,19 @@
+@import "../../style/placeholders";
+
+.ThoughtItem {
+  @extend %center-row;
+  justify-content: space-between;
+
+  width: 90%;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+  p:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    word-break: break-word;
+  }
+
+}

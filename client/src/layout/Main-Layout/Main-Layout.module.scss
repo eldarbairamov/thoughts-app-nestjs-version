@@ -1,0 +1,6 @@
+@import "../../style/placeholders";
+
+.MainLayout {
+  @extend %center-column;
+  @extend %full-view;
+}

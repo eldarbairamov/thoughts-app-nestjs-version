@@ -1,0 +1,6 @@
+@import "../../style/placeholders";
+
+.ThoughtsPage {
+  @extend %full-view;
+  @extend %center-column;
+}
