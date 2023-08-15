@@ -1,3 +1,11 @@
 $navbar-bg: #fcfcfc;
-$main-color: palevioletred;
-$main-color-hover: #d76088;
+
+$color1: palevioletred;
+$color2: darkseagreen;
+$color3: #84ACCE;
+$color4: mediumaquamarine;
+
+:root {
+  --main-color: palevioletred;
+  --main-color-hover: #c2577b;
+}

@@ -3,13 +3,12 @@
 .NoBgButton {
   border: none;
   background: none;
-  color: $main-color;
+  color: var(--main-color);
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 5px;
-  transition: color .3s;
 
   &:hover {
-    color: $main-color-hover;
+    color: var(--main-color-hover);
   }
 }

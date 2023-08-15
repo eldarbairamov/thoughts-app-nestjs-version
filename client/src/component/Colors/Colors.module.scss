@@ -1,0 +1,77 @@
+@import "../../style/placeholders";
+@import "../../style/variables";
+
+.Colors {
+  @extend %center-row;
+
+  position: absolute;
+  bottom: 50px;
+  margin: 0 auto;
+  gap: 10px;
+  width: 100%;
+
+  .color1 {
+    background: $color1;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .color1[data-color='color1'] {
+    transform: scale(1.2);
+  }
+
+  .color2 {
+    background: $color2;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .color2[data-color='color2'] {
+    transform: scale(1.2);
+  }
+
+  .color3 {
+    background: $color3;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .color3[data-color='color3'] {
+    transform: scale(1.2);
+  }
+
+  .color4 {
+    background: $color4;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .color4[data-color='color4'] {
+    transform: scale(1.2);
+  }
+
+}

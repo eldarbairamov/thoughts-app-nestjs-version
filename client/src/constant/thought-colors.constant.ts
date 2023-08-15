@@ -11,4 +11,5 @@ export const thoughtColors = [
    "#A2BCE0",
    "#D7D9B1",
    "#d9a2b3",
-   "#84ACCE" ];
+   "#84ACCE"
+];

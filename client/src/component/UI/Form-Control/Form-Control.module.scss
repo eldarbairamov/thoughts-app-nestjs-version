@@ -1,5 +1,4 @@
 @import "../../../style/placeholders";
-@import "../../../style/variables";
 
 .FormControl {
   @extend %center-column;
@@ -23,7 +22,7 @@
 
   label {
     align-self: flex-start;
-    color: $main-color;
+    color: var(--main-color);
   }
 
   label:nth-child(2) {

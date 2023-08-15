@@ -21,7 +21,7 @@ export class AuthService {
 
   async login( user: UserModel ): Promise<ITokenPair> {
     const tokenPair = {
-      accessToken: this.jwtService.sign( { userId: user.id, email: user.email }, { secret: "accessTokenSecretKey", expiresIn: "1d" } ),
+      accessToken: this.jwtService.sign( { userId: user.id, email: user.email }, { secret: "accessTokenSecretKey", expiresIn: "30s" } ),
       refreshToken: this.jwtService.sign( { userId: user.id, email: user.email }, { secret: "refreshTokenSecretKey", expiresIn: "7d" } )
     };
 

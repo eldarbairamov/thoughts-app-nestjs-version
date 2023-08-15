@@ -1,5 +1,4 @@
 @import "../../style/placeholders";
-@import "../../style/variables";
 
 .RegistrationForm {
   @extend %center-column;
@@ -38,7 +37,7 @@
 
       label {
         align-self: flex-start;
-        color: $main-color;
+        color: var(--main-color);
       }
 
       input {
@@ -61,13 +60,13 @@
     }
 
     p:nth-child(2) {
-      color: $main-color;
+      color: var(--main-color);
       font-weight: bold;
       pointer-events: auto;
       cursor: pointer;
 
       &:hover {
-        color: $main-color-hover;
+        color: var(--main-color-hover);
       }
     }
   }

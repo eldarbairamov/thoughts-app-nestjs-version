@@ -27,14 +27,14 @@
     }
 
     p:nth-child(2) {
-      color: $main-color;
+      color: var(--main-color);
       font-weight: bold;
       pointer-events: auto;
       cursor: pointer;
       transition: color .3s;
 
       &:hover {
-        color: $main-color-hover;
+        color: var(--main-color-hover);
       }
     }
 
