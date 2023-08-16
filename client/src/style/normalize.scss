@@ -1,25 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
 
-* {
-  box-sizing: border-box;
-
-  &::-webkit-scrollbar {
-    height: 5px;
-    width: 5px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #ffe8ef;
-    border-radius: 20px;
-  }
-
-  transition: .3s color, .3s background-color, .3s transform;
-}
-
-p {
-  pointer-events: none;
-}
-
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;

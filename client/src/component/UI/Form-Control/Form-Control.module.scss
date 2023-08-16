@@ -33,7 +33,9 @@
     padding: 10px;
     width: 400px;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--input-border-color);
     outline: none;
+    background: transparent;
+    color: var(--font-color);
   }
 }

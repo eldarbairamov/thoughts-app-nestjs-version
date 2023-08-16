@@ -1,13 +1,11 @@
 @import "../../style/placeholders";
 
-.MainPage {
+.WritePage {
 
   .window {
     @extend %center-column;
 
-    width: 1000px;
     height: 700px;
-
     gap: 20px;
 
     .question {
@@ -19,10 +17,13 @@
     textarea {
       @extend %input;
 
+      background: transparent;
       font-size: 20px;
       width: 500px;
       height: 100px;
       resize: none;
+      color: var(--font-color);
+      border-color: transparent;
 
       &::placeholder {
         font-style: italic;

@@ -17,6 +17,9 @@ export const storageApi = {
    getAccessToken: () => localStorage.getItem( "accessToken" ),
    getRefreshToken: () => localStorage.getItem( "refreshToken" ),
 
-   getUsername: () => localStorage.getItem( "username" )
+   getUsername: () => localStorage.getItem( "username" ),
+
+   getTheme: () => localStorage.getItem('theme'),
+   setTheme: (theme: string) => localStorage.setItem('theme', theme)
 
 };

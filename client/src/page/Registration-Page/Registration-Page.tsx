@@ -1,6 +1,6 @@
 import styles from "./Registration-Page.module.scss";
 import { RegistrationForm } from "../../component/Registration-Form/Registration-Form.tsx";
-import { Colors } from "../../component/Colors/Colors.tsx";
+import { Footer } from "../../component/Footer/Footer.tsx";
 
 export const RegistrationPage = () => {
    return (
@@ -9,7 +9,7 @@ export const RegistrationPage = () => {
           <div className={ styles.top }>
              <p> th </p>
 
-             <Colors/>
+             <Footer/>
 
              <div className={styles.typing_wrapper}>
                 <h2> Registration </h2>

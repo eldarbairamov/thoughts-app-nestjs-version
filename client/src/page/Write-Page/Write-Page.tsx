@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
-import styles from "./Main-Page.module.scss";
 import { Button } from "../../component/UI/Button/Button.tsx";
 import { useAppDispatch, useAppSelector } from "../../hook/redux.hook.ts";
 import { asyncThoughtActions } from "../../store/slice/thought.slice.ts";
 
-export const MainPage = () => {
+import styles from "./Write-Page.module.scss";
+
+export const WritePage = () => {
    const [ value, setValue ] = useState<string>( "" );
 
    const dispatch = useAppDispatch();
@@ -26,7 +27,7 @@ export const MainPage = () => {
    };
 
    return (
-       <div className={ styles.MainPage }>
+       <div className={ styles.WritePage }>
 
           <div className={ styles.window }>
 

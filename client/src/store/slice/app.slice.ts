@@ -1,19 +1,26 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { storageApi } from "../../api/storage.api.ts";
 
 interface IInitialState {
-   error: string | undefined
+   error: string | undefined,
+   theme: string
 }
 
 const initialState: IInitialState = {
-   error: undefined
+   error: undefined,
+   theme: storageApi.getTheme() || 'light'
 }
 
 export const appSlice = createSlice({
    name: 'app',
    initialState,
    reducers: {
-      setError: (state, { payload }) => {
+      setError: (state, { payload }: PayloadAction<string>) => {
          state.error = payload
+      },
+      setTheme: (state, { payload }: PayloadAction<string>) => {
+         state.theme = payload
+         storageApi.setTheme(payload)
       }
    }
 })

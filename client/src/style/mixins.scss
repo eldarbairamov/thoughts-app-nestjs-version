@@ -7,3 +7,33 @@
   padding: 10px 20px;
   border-radius: 5px;
 }
+
+@mixin small_phones {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin large_phones {
+  @media screen and (min-width: 600px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (min-width: 768px)and (max-width: 1024px)  {
+    @content;
+  }
+}
+
+@mixin laptops {
+  @media screen and (min-width: 1024px) and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin desktops {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../style/placeholders";
+
+.Footer {
+  @extend %center-row;
+
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+
+  .theme_switcher {
+    position: absolute;
+    left: 50px;
+
+    svg {
+      transition: .3s;
+      cursor: pointer;
+    }
+  }
+}

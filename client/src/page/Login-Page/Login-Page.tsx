@@ -1,6 +1,6 @@
 import styles from "./Login-Page.module.scss";
 import { LoginForm } from "../../component/Login-Form/Login-Form.tsx";
-import { Colors } from "../../component/Colors/Colors.tsx";
+import { Footer } from "../../component/Footer/Footer.tsx";
 
 export const LoginPage = () => {
    return (
@@ -16,7 +16,7 @@ export const LoginPage = () => {
 
           <LoginForm/>
 
-          <Colors/>
+          <Footer/>
 
        </div>
    );

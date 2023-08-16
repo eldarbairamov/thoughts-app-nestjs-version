@@ -8,11 +8,11 @@
   width: 100%;
   gap: 20px;
   position: relative;
-  background: $navbar-bg;
+  background: var(--navbar-bg);
 
   a {
     @extend %nav-link;
-    color: black;
+    color: var(--font-color);
   }
 
   a[class='active'] {

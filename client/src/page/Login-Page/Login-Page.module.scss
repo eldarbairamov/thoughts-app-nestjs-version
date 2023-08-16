@@ -1,14 +1,15 @@
 @import "../../style/placeholders";
-@import "../../style/variables";
 
 .LoginPage {
   @extend %full-view;
+
+  background: var(--background-color);
 
   .top {
     @extend %center-row;
 
     height: 7%;
-    background: $navbar-bg;
+    background: var(--navbar-bg);
 
     .typing_wrapper {
       h2 {
@@ -18,7 +19,7 @@
         overflow: hidden;
         white-space: nowrap;
         border-right: 3px solid;
-        color: #505050;
+        color: var(--typing-font-color);
       }
     }
 
