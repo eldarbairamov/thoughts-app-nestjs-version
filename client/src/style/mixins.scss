@@ -37,3 +37,9 @@
     @content;
   }
 }
+
+@mixin height_limit {
+  @media screen and (max-height: 910px) {
+    @content;
+  }
+}

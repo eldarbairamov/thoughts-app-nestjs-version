@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 
-import styles from "./Thoughts-Page.module.scss";
+import styles from "./Thought0List-Page.module.scss";
 import { useAppDispatch } from "../../hook/redux.hook.ts";
 import { asyncThoughtActions } from "../../store/slice/thought.slice.ts";
 import { ThoughtList } from "../../component/Thought-List/Thought-List.tsx";
 
-export const ThoughtsPage = () => {
+export const ThoughtListPage = () => {
    const dispatch = useAppDispatch();
 
    useEffect( () => {
@@ -13,7 +13,7 @@ export const ThoughtsPage = () => {
    }, [] );
 
    return (
-       <div className={ styles.ThoughtsPage }>
+       <div className={ styles.ThoughtListPage }>
 
           <ThoughtList/>
 

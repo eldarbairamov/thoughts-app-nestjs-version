@@ -1,15 +1,13 @@
 @import "../../style/placeholders";
 @import "../../style/mixins";
 
-.MainLayout {
+.ThoughtListPage {
   @extend %center-column;
-  @extend %full-view;
+
+  width: 100%;
+  height: 100%;
 
   @include small_phones {
     width: 1000px;
-  }
-
-  @include height_limit {
-    height: 1000px;
   }
 }
