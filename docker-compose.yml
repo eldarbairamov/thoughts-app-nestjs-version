@@ -26,3 +26,13 @@ services:
       - ./db-data:/var/lib/postgresql/data
 #      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     restart: unless-stopped
+
+  client:
+    container_name: thoughts-client-nestjs
+    image: nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:etc/nginx/conf.d/default.conf
+      - ./client/dist:usr/share/nginx/html
