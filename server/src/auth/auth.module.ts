@@ -9,15 +9,17 @@ import { JwtModule } from "@nestjs/jwt";
 import { LoginStrategy } from "./strategy/login.strategy";
 import { AccessStrategy } from "./strategy/access.strategy";
 import { RefreshStrategy } from "./strategy/refresh.strategy";
+import { ConfigModule } from "@nestjs/config";
 
 @Module( {
-  providers: [ AuthService, LoginStrategy, AccessStrategy, RefreshStrategy ],
-  controllers: [ AuthController ],
-  imports: [
-    SequelizeModule.forFeature( [ OAuthModel, UserModel ] ),
-    PassportModule,
-    JwtModule.register( {} )
-  ]
+   providers: [ AuthService, LoginStrategy, AccessStrategy, RefreshStrategy ],
+   controllers: [ AuthController ],
+   imports: [
+      SequelizeModule.forFeature( [ OAuthModel, UserModel ] ),
+      PassportModule,
+      JwtModule.register( {} ),
+      ConfigModule
+   ]
 } )
 export class AuthModule {
 

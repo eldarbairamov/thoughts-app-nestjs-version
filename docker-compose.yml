@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  api:
+    container_name: thoughts-api-nestjs
+    build: ./server
+    command: npm run start:prod
+    ports:
+      - '5400:5400'
+    env_file:
+      - ./server/.env
+    environment:
+      - POSTGRES_HOST=db
+    restart: unless-stopped
+    depends_on:
+      - db
+
+  db:
+    container_name: thoughts-db-nestjs
+    image: postgres:15.3-alpine
+    env_file:
+      - ./server/.env
+    ports:
+      - "5430:5432"
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
+#      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: unless-stopped
