@@ -1,15 +1,15 @@
 import { SequelizeModuleOptions } from "@nestjs/sequelize";
 import { UserModel } from "../user/model/user.model";
 import { ThoughtModel } from "../thought/model/thought.model";
-import config from "./index";
+import process from "process";
 
 export const dbConfig: SequelizeModuleOptions = {
    dialect: "postgres",
-   host: config().POSTGRES_HOST,
-   port: +config().POSTGRES_PORT,
-   database: config().POSTGRES_DB,
-   username: config().POSTGRES_USERNAME,
-   password: config().POSTGRES_PASSWORD,
+   host: process.env.POSTGRES_HOST,
+   port: +process.env.POSTGRES_PORT,
+   database: process.env.POSTGRES_DB || 'thoughts',
+   username: process.env.POSTGRES_USERNAME,
+   password: process.env.POSTGRES_PASSWORD,
    models: [ UserModel, ThoughtModel ],
    logging: false,
    autoLoadModels: true,

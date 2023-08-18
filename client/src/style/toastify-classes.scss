@@ -15,6 +15,7 @@
 .Toastify__toast-container--bottom-left {
 }
 .Toastify__toast-container--bottom-center {
+  bottom: 40px;
 }
 .Toastify__toast-container--bottom-right {
 }
@@ -25,6 +26,12 @@
   font-family: Inconsolata, serif;
   font-size: 18px;
   box-shadow: none;
+  background: var(--navbar-bg);
+  color: var(--font-color);
+
+  div {
+    transition: 50ms;
+  }
 }
 
 .Toastify__toast--rtl {
@@ -52,6 +59,10 @@
 .Toastify__toast-theme--colored.Toastify__toast--warning {
 }
 .Toastify__toast-theme--colored.Toastify__toast--error {
+}
+
+.Toastify--animate {
+  animation-duration: 1s;
 }
 
 .Toastify__progress-bar {
