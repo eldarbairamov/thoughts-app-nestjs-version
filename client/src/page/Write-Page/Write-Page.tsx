@@ -4,10 +4,21 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../../component/UI/Button/Button.tsx";
 import { useAppDispatch, useAppSelector } from "../../hook/redux.hook.ts";
 import { asyncThoughtActions } from "../../store/slice/thought.slice.ts";
+import { useSpring, animated } from "@react-spring/web";
 
 import styles from "./Write-Page.module.scss";
 
 export const WritePage = () => {
+   const [ props ] = useSpring(
+       () => ({
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+          config: {
+             duration: 300
+          }
+       })
+   );
+
    const [ value, setValue ] = useState<string>( "" );
 
    const dispatch = useAppDispatch();
@@ -33,11 +44,12 @@ export const WritePage = () => {
 
              { value && <p className={ styles.question }> Hey { username }! What is on your mind today? </p> }
 
-             <textarea placeholder={ `Hey, ${ username }! What is on your mind today?` }
-                       data-border={Boolean(value)}
-                       maxLength={ 200 }
-                       value={ value }
-                       onChange={ handleInput }/>
+             <animated.textarea style={ props }
+                                placeholder={ `Hey, ${ username }! What is on your mind today?` }
+                                data-border={ Boolean( value ) }
+                                maxLength={ 200 }
+                                value={ value }
+                                onChange={ handleInput }/>
 
              { value &&
                  <Button text={ "accept" }
