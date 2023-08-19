@@ -27,7 +27,7 @@ export class AuthController {
   @UseGuards( LoginGuard )
   @Post( "login" )
   async login(
-    @Req() request: Request & { user: UserModel } ): Promise<ITokenPair> {
+    @Req() request: Request & { user: UserModel } ): Promise<ISuccessLogin> {
 
     return this.authService.login( request.user );
   }
@@ -44,7 +44,7 @@ export class AuthController {
   @UseGuards( RefreshGuard )
   @Post( "refresh" )
   async refresh(
-    @User() data: { userId: number, email: string, refreshToken: string } ): Promise<ITokenPair> {
+    @User() data: { userId: number, email: string, refreshToken: string } ): Promise<ISuccessLogin> {
 
     return this.authService.refresh( data.userId, data.email, data.refreshToken );
   }

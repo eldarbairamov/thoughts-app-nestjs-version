@@ -22,7 +22,7 @@ export class AuthService {
       await this.userModel.create( { ...dto } );
    }
 
-   async login( user: UserModel ): Promise<ITokenPair> {
+   async login( user: UserModel ): Promise<ISuccessLogin> {
       const tokenPair = {
          accessToken: this.jwtService.sign( { userId: user.id, email: user.email }, { secret: this.configService.get( "SECRET_ACCESS_KEY" ), expiresIn: "1d" } ),
          refreshToken: this.jwtService.sign( { userId: user.id, email: user.email }, { secret: this.configService.get( "SECRET_REFRESH_KEY" ), expiresIn: "7d" } )
@@ -37,7 +37,7 @@ export class AuthService {
       await this.oAuthModel.destroy( { where: { accessToken } } );
    }
 
-   async refresh( userId: number, email: string, refreshToken: string ): Promise<ITokenPair> {
+   async refresh( userId: number, email: string, refreshToken: string ): Promise<ISuccessLogin> {
       const tokenPair = {
          accessToken: this.jwtService.sign( { userId, email }, { secret: this.configService.get( "SECRET_ACCESS_KEY" ), expiresIn: "1d" } ),
          refreshToken: this.jwtService.sign( { userId, email }, { secret: this.configService.get( "SECRET_REFRESH_KEY" ), expiresIn: "7d" } )

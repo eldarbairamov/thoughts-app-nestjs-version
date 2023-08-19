@@ -20,10 +20,10 @@ interface UserCreationAttr {
 @Table( { timestamps: false, tableName: "users" } )
 export class UserModel extends Model<UserAttr, UserCreationAttr> {
 
-  @Column( { type: DataType.STRING, allowNull: false } )
+  @Column( { type: DataType.STRING, allowNull: false, unique: true } )
   username: string;
 
-  @Column( { type: DataType.STRING, allowNull: false } )
+  @Column( { type: DataType.STRING, allowNull: false, unique: true } )
   email: string;
 
   @Column( { type: DataType.STRING, allowNull: false } )
