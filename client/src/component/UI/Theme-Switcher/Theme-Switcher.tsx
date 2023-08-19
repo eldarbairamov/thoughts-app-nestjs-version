@@ -13,9 +13,9 @@ export const ThemeSwitcher = () => {
        <div className={ styles.ThemeSwitcher}>
 
           { theme === "light" ?
-              <BsFillMoonStarsFill size={ 25 }
+              <BsFillMoonStarsFill size={ 20 }
                                    onClick={ () => dispatch( appActions.setTheme( "dark" ) ) }/> :
-              <BsFillSunFill size={ 30 }
+              <BsFillSunFill size={ 25 }
                              color={ "white" }
                              onClick={ () => dispatch( appActions.setTheme( "light" ) ) }/> }
 
