@@ -1,4 +1,4 @@
-<h2 align="center">Thoughts (1.0-beta) | React + Express.js</h2>
+<h2 align="center">Thoughts (1.0-beta) | React + Nest.js</h2>
 
 ###
 
