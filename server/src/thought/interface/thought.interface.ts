@@ -1,11 +1,10 @@
 export interface IThought {
-   readonly id: number,
+   readonly ownerId: number,
    readonly content: string,
-   readonly ownerId: string
    readonly date: number
 }
 
 export interface IThoughts {
-   data: IThought[],
-   count: number
+   readonly data: IThought[],
+   readonly count: number
 }

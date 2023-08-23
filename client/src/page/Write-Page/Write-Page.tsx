@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../component/UI/Button/Button.tsx";
-import { useAppDispatch, useAppSelector } from "../../hook/redux.hook.ts";
+import { useAppDispatch, useAppSelector } from "../../hook";
 import { asyncThoughtActions } from "../../store/slice/thought.slice.ts";
 import { useSpring, animated } from "@react-spring/web";
 

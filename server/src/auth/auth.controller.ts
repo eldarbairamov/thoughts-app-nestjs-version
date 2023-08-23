@@ -21,7 +21,7 @@ export class AuthController {
     @Body() dto: RegistrationDto ): Promise<{ message: string }> {
 
     await this.authService.registration( dto );
-    return { message: "success" };
+    return { message: "Success" };
   }
 
   @UseGuards( LoginGuard )
@@ -38,7 +38,7 @@ export class AuthController {
     @User( "token" ) token: string ): Promise<{ message: string }> {
 
     await this.authService.logout( token );
-    return { message: "success" };
+    return { message: "Success" };
   }
 
   @UseGuards( RefreshGuard )
